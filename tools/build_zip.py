@@ -60,8 +60,6 @@ def main() -> int:
                 "PRIVACY.md",
                 "CHANGELOG.md",
                 "VALIDATION.md",
-                "validation",
-                "validation-report.json",
                 "docs",
                 "MAINTAINING.md",
                 "PUBLICATION.md",

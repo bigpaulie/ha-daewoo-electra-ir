@@ -10,6 +10,7 @@
 - Exclude local metadata, environments and caches from distribution; separate review archives from approved install releases.
 - Support the native temperature properties in the 2026.11 beta while retaining the 2026.10 interface path.
 - Set project documentation, issue tracker, CODEOWNERS and HACS installation links for the public repository.
+- Classify the integration as heat pumps and air conditioning for Home Assistant and HACS.
 - Preserve existing integrations and stored entity selections. Earlier local preview users must review fallback mappings after updating.
 
 Repository-side HACS validation, a full Home Assistant deployment and further appliance testing remain release prerequisites or explicitly documented preview limits. This version has not been published.
