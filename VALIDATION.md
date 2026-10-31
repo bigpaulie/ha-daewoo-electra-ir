@@ -49,7 +49,4 @@ Generated power/mode/target/fan controls, IFeel enable/disable, mode-specific li
 
 The manifest now contains actual project documentation/issue URLs and maintainer attribution, and the release metadata gate plus hassfest pass. After the first source push, run the HACS action against the actual repository. Verify HACS installation/update/rollback and full integration setup/reload in a staging Home Assistant instance. No official quality-scale tier or catalog acceptance is claimed.
 
-- [Raw final runtime results](validation/runtime-smoke.txt)
-- [Raw final hassfest results](validation/hassfest.txt)
-- [Machine-readable summary](validation-report.json)
-- [Publication readiness](PUBLICATION.md)
+See [publication readiness](PUBLICATION.md).
