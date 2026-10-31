@@ -1,0 +1,77 @@
+name: Validate integration
+
+"on":
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  PYTHONDONTWRITEBYTECODE: "1"
+
+jobs:
+  offline-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+      - name: Install pinned development validators
+        run: python3 -m pip install -r requirements-dev.txt
+      - name: Check style and formatting
+        run: |
+          python3 -m ruff check . --no-cache
+          python3 -m ruff format --check . --no-cache
+      - name: Run offline tests
+        run: python3 -m unittest discover -s tests -v
+      - name: Validate protocol and public-source contents
+        run: |
+          python3 tools/ir_tool.py validate
+          python3 tools/check_publication.py --release
+      - name: Check YAML syntax
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import yaml
+          for directory in ('custom_components', '.github'):
+              for path in Path(directory).rglob('*'):
+                  if path.suffix in {'.yaml', '.yml'}:
+                      assert isinstance(yaml.safe_load(path.read_text()), dict), path
+          PY
+
+  hassfest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+      - uses: home-assistant/actions/hassfest@master
+
+  hacs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+      - uses: hacs/action@main
+        with:
+          category: integration
+          comment: "false"
+
+  runtime-smoke-beta:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+      - name: Check real HA 2026.11.0b2 interfaces with fake services
+        run: >-
+          docker run --rm --network none
+          -e PYTHONPATH=/usr/src/homeassistant
+          -e PYTHONDONTWRITEBYTECODE=1
+          -v "$GITHUB_WORKSPACE:/github/workspace:ro"
+          --entrypoint python
+          ghcr.io/home-assistant/hassfest@sha256:a6a695921327230c07ba89ebbb48778737bc1dda30b00cb60c9276585687fc6d
+          /github/workspace/tests/runtime_smoke.py

@@ -1,0 +1,17 @@
+{
+  "domain": "daewoo_electra_ir",
+  "name": "Daewoo ELECTRA IR",
+  "codeowners": [
+    "@bigpaulie"
+  ],
+  "config_flow": true,
+  "dependencies": [
+    "broadlink"
+  ],
+  "documentation": "https://github.com/bigpaulie/ha-daewoo-electra-ir#readme",
+  "integration_type": "device",
+  "iot_class": "assumed_state",
+  "issue_tracker": "https://github.com/bigpaulie/ha-daewoo-electra-ir/issues",
+  "requirements": [],
+  "version": "0.1.1"
+}

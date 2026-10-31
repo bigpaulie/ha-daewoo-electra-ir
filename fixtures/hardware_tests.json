@@ -1,0 +1,9 @@
+{
+  "tested_21": "JgDYAAABKJQROxA7ExISExITEhMROhQ4EToROhM4FBITERQSEhMSORITEzgUEhAUFDgTEhEUEhMUOBITExISORI5EToROxITExMSEhMTExESExM5EjkRFRETExMRExMTExISExITExITExISExMSORITExISExM5EjkRORM5ETkTORITEToUEhMSEhMTExISEhQSEhEUExMTEhEUExIRFBMTEDoRFBMTExIRFBMSERQTExETExMRFBITFDcUOBI5EjkSExMSERUSEhQ5EhMROhE6ExMSOREUEgANBQ==",
+  "observations": {
+    "28_c": "Compressor stopped, no beep; heat mode, target 24 C",
+    "21_c": "Compressor slowly starting again"
+  },
+  "note": "The contributed 21 C waveform matches the generated payload. The reported 28 C raw waveform was not supplied; its expected payload is calculated from the sensor template.",
+  "provenance": "Anonymized contributed IR capture and contributor-reported observations; no device identifiers or source conversation links retained."
+}

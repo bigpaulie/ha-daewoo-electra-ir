@@ -1,0 +1,107 @@
+{
+  "version": "0.1.1",
+  "validation_date": "2026-10-31",
+  "publication_approved": false,
+  "offline_tests": {
+    "passed": 26,
+    "failed": 0,
+    "home_assistant_doubles_used": true
+  },
+  "runtime_smoke_tests": {
+    "passed": 4,
+    "failed": 0,
+    "home_assistant": "2026.11.0b2",
+    "python": "3.14.10",
+    "fake_remote_service": true,
+    "network_disabled": true,
+    "full_deployment_test": false,
+    "final_deprecation_warnings": 0
+  },
+  "ruff": {
+    "version": "0.17.3",
+    "lint": "passed",
+    "format": "passed"
+  },
+  "yaml": "passed",
+  "source_privacy_scan": "passed",
+  "documentation_relative_links": "passed",
+  "hassfest": {
+    "status": "passed",
+    "errors": [],
+    "other_reported_errors": [],
+    "image_digest": "sha256:a6a695921327230c07ba89ebbb48778737bc1dda30b00cb60c9276585687fc6d",
+    "integrations": 1,
+    "invalid_integrations": 0
+  },
+  "hacs_validator": "pending_actual_public_repository",
+  "release_metadata_missing": [],
+  "full_control_combinations": 1360,
+  "sensor_whole_degrees": 51,
+  "capture_decodes": {
+    "manual_ifeel_on": {
+      "hex": "c3 87 16 0e a0 00 28 5f 00 20 00 1e d3",
+      "checksum_valid": true,
+      "power": true,
+      "setpoint_c": 24,
+      "mode_code": 1,
+      "fan_code": 5,
+      "ifeel": true,
+      "sensor_update": false,
+      "sensor_c": 21
+    },
+    "manual_ifeel_off": {
+      "hex": "c3 87 11 1b a0 00 20 00 00 20 00 1e 74",
+      "checksum_valid": true,
+      "power": true,
+      "setpoint_c": 24,
+      "mode_code": 1,
+      "fan_code": 5,
+      "ifeel": false,
+      "sensor_update": false,
+      "sensor_c": null
+    },
+    "sensor_23": {
+      "hex": "c3 87 12 79 60 00 88 61 00 20 00 1e 5c",
+      "checksum_valid": true,
+      "power": true,
+      "setpoint_c": 24,
+      "mode_code": 4,
+      "fan_code": 3,
+      "ifeel": true,
+      "sensor_update": true,
+      "sensor_c": 23
+    },
+    "sensor_25": {
+      "hex": "c3 87 13 4f 60 00 88 63 00 20 00 1e 35",
+      "checksum_valid": true,
+      "power": true,
+      "setpoint_c": 24,
+      "mode_code": 4,
+      "fan_code": 3,
+      "ifeel": true,
+      "sensor_update": true,
+      "sensor_c": 25
+    },
+    "tested_21": {
+      "hex": "c3 87 12 79 60 00 88 5f 00 20 00 1e 5a",
+      "checksum_valid": true,
+      "power": true,
+      "setpoint_c": 24,
+      "mode_code": 4,
+      "fan_code": 3,
+      "ifeel": true,
+      "sensor_update": true,
+      "sensor_c": 21
+    }
+  },
+  "full_home_assistant_deployment_tested": false,
+  "physical_ir_sent_during_audit": false,
+  "generated_full_control_hardware_verified": false,
+  "contributor_reported_sensor_tests_c": [
+    21,
+    28
+  ],
+  "source_ready_for_first_commit": true,
+  "repository": "https://github.com/bigpaulie/ha-daewoo-electra-ir",
+  "release_metadata_check": "passed"
+}

@@ -1,0 +1,68 @@
+{
+  "title": "Daewoo ELECTRA IR",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Daewoo AC via Broadlink",
+        "description": "Creates a separate climate entity. Setup sends no IR. Full controls are disabled by default; sensor-only reporting must be started explicitly. Existing integrations are unchanged.",
+        "data": {
+          "name": "New device name",
+          "remote_entity": "Broadlink remote",
+          "temperature_sensor": "Room temperature sensor",
+          "enable_control": "Enable full controls (generated commands need hardware verification)",
+          "learned_fallback": "Use explicitly configured learned commands where applicable",
+          "learned_device": "Broadlink learned-code device group (required only for fallback)",
+          "report_interval": "Refresh interval (60\u2013600 seconds)",
+          "sensor_max_age": "Maximum sensor age (300\u201386400 seconds)",
+          "off_command": "Learned power-off command (optional)",
+          "cool_low_command": "Learned COOL 24\u00b0C low-fan command (optional)",
+          "cool_medium_command": "Learned COOL 24\u00b0C medium-fan command (optional)",
+          "cool_high_command": "Learned COOL 24\u00b0C high-fan command (optional)"
+        }
+      }
+    },
+    "error": {
+      "empty_name": "Enter a name.",
+      "not_broadlink": "Select an entity from the Broadlink integration.",
+      "missing_sensor": "The sensor does not exist.",
+      "empty_device": "Enter the learned-code group name.",
+      "age_too_short": "Maximum sensor age must be at least the refresh interval.",
+      "remote_fixed": "Remove and re-add this integration to change the remote.",
+      "no_learned_commands": "Configure at least one learned command, or disable learned fallback."
+    },
+    "abort": {
+      "already_configured": "This Broadlink already has a Daewoo integration entry."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Daewoo IR options",
+        "description": "Saving reloads the entry and stops reporting. Re-arm explicitly. Full controls remain hardware-unverified.",
+        "data": {
+          "name": "New device name",
+          "remote_entity": "Broadlink remote",
+          "temperature_sensor": "Room temperature sensor",
+          "enable_control": "Enable full controls (generated commands need hardware verification)",
+          "learned_fallback": "Use explicitly configured learned commands where applicable",
+          "learned_device": "Broadlink learned-code device group (required only for fallback)",
+          "report_interval": "Refresh interval (60\u2013600 seconds)",
+          "sensor_max_age": "Maximum sensor age (300\u201386400 seconds)",
+          "off_command": "Learned power-off command (optional)",
+          "cool_low_command": "Learned COOL 24\u00b0C low-fan command (optional)",
+          "cool_medium_command": "Learned COOL 24\u00b0C medium-fan command (optional)",
+          "cool_high_command": "Learned COOL 24\u00b0C high-fan command (optional)"
+        }
+      }
+    },
+    "error": {
+      "empty_name": "Enter a name.",
+      "not_broadlink": "Select an entity from the Broadlink integration.",
+      "missing_sensor": "The sensor does not exist.",
+      "empty_device": "Enter the learned-code group name.",
+      "age_too_short": "Maximum sensor age must be at least the refresh interval.",
+      "remote_fixed": "Remove and re-add this integration to change the remote.",
+      "no_learned_commands": "Configure at least one learned command, or disable learned fallback."
+    }
+  }
+}

@@ -1,0 +1,36 @@
+test_control_disabled_but_sensor_only_available (test_climate_behavior.BehaviorTests) ... ok
+test_fahrenheit_conversion (test_climate_behavior.BehaviorTests) ... ok
+test_invalid_stale_unknown_unit_no_fabricated_reading (test_climate_behavior.BehaviorTests) ... Daewoo temperature reports suspended: invalid_sensor; use the physical remote if needed. Appliance fallback is unverified
+Daewoo temperature reports suspended: sensor_out_of_range; use the physical remote if needed. Appliance fallback is unverified
+Daewoo temperature reports suspended: stale_sensor; use the physical remote if needed. Appliance fallback is unverified
+Daewoo temperature reports suspended: unknown_sensor_unit; use the physical remote if needed. Appliance fallback is unverified
+ok
+test_learned_cooling_fallback_and_ifeel_clear (test_climate_behavior.BehaviorTests) ... ok
+test_no_startup_transmit_or_restored_power (test_climate_behavior.BehaviorTests) ... ok
+test_offline_and_failures_not_committed_or_flooded (test_climate_behavior.BehaviorTests) ... Daewoo temperature report failed: Broadlink command failed: network
+ok
+test_remote_outage_disarms_until_explicit_restart (test_climate_behavior.BehaviorTests) ... ok
+test_setpoint_fan_off_cache_and_combined_on (test_climate_behavior.BehaviorTests) ... ok
+test_throttle_change_refresh_and_stop (test_climate_behavior.BehaviorTests) ... ok
+test_unload_prevents_queued_reports (test_climate_behavior.BehaviorTests) ... ok
+test_fallback_requires_group_and_mapping (test_config_flow.ConfigValidationTests) ... ok
+test_invalid_name_missing_sensor_and_age (test_config_flow.ConfigValidationTests) ... ok
+test_missing_or_non_broadlink_remote_is_rejected (test_config_flow.ConfigValidationTests) ... ok
+test_no_installation_entity_defaults (test_config_flow.ConfigValidationTests) ... ok
+test_broadlink_layout_and_independent_bit_order (test_protocol.ProtocolTests) ... ok
+test_exhaustive_control_fields (test_protocol.ProtocolTests) ... ok
+test_half_up (test_protocol.ProtocolTests) ... ok
+test_invalid_inputs (test_protocol.ProtocolTests) ... ok
+test_real_captures (test_protocol.ProtocolTests) ... ok
+test_sensor_only_changes_measurement_and_checksum (test_protocol.ProtocolTests) ... ok
+test_tested_21_and_expected_28 (test_protocol.ProtocolTests) ... ok
+test_upstream_real_example (test_protocol.ProtocolTests) ... ok
+test_archive_rejects_cache_and_private_data (test_publication.PublicationTests) ... ok
+test_leak_patterns_and_safe_protocol_bytes (test_publication.PublicationTests) ... ok
+test_source_is_sanitized (test_publication.PublicationTests) ... ok
+test_unassigned_release_metadata_is_rejected (test_publication.PublicationTests) ... ok
+
+----------------------------------------------------------------------
+Ran 26 tests in 0.208s
+
+OK

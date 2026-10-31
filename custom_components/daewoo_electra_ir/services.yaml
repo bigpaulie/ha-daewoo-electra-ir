@@ -1,0 +1,19 @@
+start_sensor_updates:
+  name: Start sensor updates
+  description: >-
+    Start silent FEELING reports only. First use the physical remote to select the
+    correct mode and setpoint and enable FEELING. This does not turn the AC on or
+    change its mode. All delivery is unconfirmed.
+  target:
+    entity:
+      integration: daewoo_electra_ir
+      domain: climate
+stop_sensor_updates:
+  name: Stop sensor updates
+  description: >-
+    Stop this integration's FEELING reports immediately. This sends no IR and does
+    not clear the AC's FEELING state. Use the physical remote to resume normal control.
+  target:
+    entity:
+      integration: daewoo_electra_ir
+      domain: climate

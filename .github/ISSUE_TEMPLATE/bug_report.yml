@@ -1,0 +1,47 @@
+name: Bug report
+description: Report an integration problem with sanitized reproduction details.
+body:
+  - type: markdown
+    attributes:
+      value: >-
+        Check README troubleshooting first. Remove entity IDs, addresses, tokens,
+        local paths and account details from logs. Do not upload backups or .storage files.
+        Use the private Security channel for vulnerability details when available.
+  - type: input
+    id: integration_version
+    attributes:
+      label: Integration version or commit
+      placeholder: "0.1.1"
+    validations:
+      required: true
+  - type: input
+    id: home_assistant_version
+    attributes:
+      label: Home Assistant Core version
+    validations:
+      required: true
+  - type: dropdown
+    id: workflow
+    attributes:
+      label: Affected workflow
+      options:
+        - Installation or setup
+        - Sensor-only reporting
+        - Full climate controls
+        - Learned-command fallback
+        - Update or rollback
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps and expected behavior
+      description: Describe one reproducible problem and what happened instead.
+    validations:
+      required: true
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Sanitized diagnostics
+      description: Include relevant report_status/source_status and short log excerpts only.
+      render: text
